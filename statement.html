@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Research Statement — Santosh Gothwal</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <style>
@@ -33,65 +33,88 @@
 
             <!-- Hero Image -->
             <div class="rounded-3xl overflow-hidden shadow mb-10">
-                <img src="images/statement/statement.png" class="w-full object-cover" alt="Research statement illustration">
+                <img src="images/statement/statement.png" class="w-full object-cover"
+                    alt="Research statement illustration">
             </div>
 
-            <!-- Content Card -->
+            <!-- ================= CONTENT CARD ================= -->
             <div class="bg-[#EDEEE7] rounded-3xl p-8 md:p-12 shadow leading-relaxed text-gray-900">
 
-                <!-- Lead paragraph with drop-cap -->
-                <p
-                    class="mb-8 text-lg md:text-xl first-letter:text-5xl first-letter:font-bold first-letter:pr-1 first-letter:float-left">
-                    Chemotherapeutic treatment of cancers is influenced by DNA mutations in cancer cells.
-                    Mutations in genes can disrupt cellular pathways and affect treatment outcomes.
-                    Approved chemotherapeutic agents mostly belong to DNA replication inhibitors (Gemcitabine,
-                    Hydroxyurea),
-                    DNA repair inhibitors (DNA-PKs, NHEJ/HR inhibitors), or modulators of histone modifications
-                    triggered by the DNA damage response. If understood well the nature of these DNA- mutation
-                    and their context with cellular responses induced by approved, chemotherapeutic drugs,
-                    this is quite possible to develop target therapies with best sensitivity and safer outcomes,
-                    nullifying the existing roadblock in the safety concerns of the existing chemotherapeutics.
+                <!-- Lead Paragraph -->
+                <p class="mb-8 text-lg md:text-xl
+            first-letter:text-5xl first-letter:font-bold
+            first-letter:pr-1 first-letter:float-left">
+                    Chemotherapeutic responses in cancer are strongly influenced by DNA
+                    mutations within tumor cells. Gene mutations can disrupt key cellular
+                    pathways and alter treatment outcomes. Most approved chemotherapeutic
+                    agents fall into three major categories:
+                    DNA replication inhibitors (e.g., Gemcitabine, Hydroxyurea),
+                    DNA repair inhibitors (including DNA-PK, NHEJ, and HR inhibitors),
+                    and modulators of histone modifications triggered by the DNA damage
+                    response.
+                    By understanding how these mutations interact with drug-induced
+                    cellular stress, it becomes possible to develop targeted therapies
+                    with greater sensitivity and improved safety profiles — overcoming
+                    many of the limitations associated with current chemotherapeutic agents.
                 </p>
 
-                <!-- Section divider -->
+                <!-- Divider -->
                 <div class="border-t border-gray-300 my-8"></div>
 
+                <!-- Section 2 -->
                 <p class="mb-6">
-                    Effective chemotherapeutic response can be fluctuated by intrinsic gain- and loss-of-function
-                    alterations in cancer cells to DNA mutations. For instance the mutation in TP53, a key tumor
-                    suppressor and most mutated in human cancers, can lead to chemotherapeutic resistance. Also,
-                    excessive single-strand DNA formation may enhance homologous recombination (HR), leading to
-                    resistance against Poly(ADP-ribose) polymerase (PARP) inhibitors, which are approved for
-                    BRCA1/2-mutant breast cancers.
+                    Drug response can vary widely depending on mutation-driven
+                    gain- or loss-of-function alterations in cancer cells.
+                    For example, mutations in <strong>TP53</strong> — one of the most
+                    frequently mutated tumor suppressors in human cancers —
+                    can promote resistance to chemotherapy.
+                    Similarly, excessive single-stranded DNA formation may enhance
+                    homologous recombination (HR), resulting in resistance to
+                    Poly(ADP-ribose) polymerase (PARP) inhibitors currently used
+                    in BRCA1/2-mutant breast cancers.
                 </p>
 
+                <!-- Section 3 -->
                 <p class="mb-6">
-                    Additionally, variations in DNA repair factors—spanning HR, non-homologous end-joining (NHEJ), and
-                    DNA replication machinery—can drive drug resistance through mechanisms such as excessive DNA repair
-                    via alternative pathways, R-loop formation, elevated oncogene expression, reduced apoptotic
-                    activity, altered E2/E3 ligase function, and modified metastatic receptor expression. These factors
-                    collectively undermine the efficacy of chemotherapeutic targets.
+                    Additional mutations affecting DNA repair factors — including
+                    HR, non-homologous end joining (NHEJ), and DNA replication
+                    pathways — may also promote drug resistance through mechanisms such as:
+                    compensatory DNA repair activity,
+                    R-loop accumulation,
+                    oncogene hyperactivation,
+                    impaired apoptosis,
+                    altered ubiquitin-ligase function,
+                    and dysregulated metastatic signaling.
+                    Collectively, these adaptations weaken the effectiveness
+                    of conventional chemotherapeutic strategies.
                 </p>
 
-                <!-- Pull-quote -->
-                <blockquote
-                    class="bg-white rounded-2xl border-l-4 border-gray-500 p-6 my-10 italic text-lg text-gray-700">
-                    “Personalized chemotherapy begins with decoding mutation-driven vulnerabilities within each tumor.”
+                <!-- Pull Quote -->
+                <blockquote class="bg-white rounded-2xl border-l-4 border-gray-500
+                     p-6 my-10 italic text-lg text-gray-700">
+                    “Personalized chemotherapy begins with decoding
+                    mutation-driven vulnerabilities within each tumor.”
                 </blockquote>
 
+                <!-- Section 4 -->
                 <p class="mb-6">
-                    Current chemotherapy regimens for several cancers including of the lung cancer, breast cancer, and
-                    cholangiocarcinoma often rely on non-specific agents like gemcitabine and etoposide, lacking
-                    tailored precision. In contrast, personalized cancer medicine, including selective immunotherapies,
-                    represents the future of effective cancer treatment.
+                    Current chemotherapy regimens for cancers such as lung cancer,
+                    breast cancer, and cholangiocarcinoma still rely heavily on
+                    broadly acting agents like gemcitabine and etoposide, without
+                    sufficient molecular precision. In contrast, personalized cancer
+                    medicine — including mutation-guided therapies and selective
+                    immunotherapies — represents the future of oncology.
                 </p>
 
+                <!-- Closing -->
                 <p>
-                    The long-term objective is to develop systems that classify cancer mutations in individual patients
-                    and evaluate optimal chemotherapeutic drug combinations before the initial regimen is prescribed by
-                    oncologists. This approach aims to enhance decision-making for drug selection, improve patient life
-                    expectancy, and minimize damage to healthy tissues, which is often a consequence of conventional
-                    chemotherapies. Research efforts are dedicated to advancing this vision of precision oncology.
+                    The long-term goal of this research is to develop systems capable
+                    of classifying tumor-specific mutations in individual patients
+                    and predicting optimal drug combinations <em>before</em>
+                    treatment is initiated. Such precision tools will support
+                    clinical decision-making, extend patient survival, and reduce
+                    toxicity to healthy tissues — advancing the broader vision of
+                    personalized chemotherapy and precision oncology.
                 </p>
 
             </div>

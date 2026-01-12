@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Santosh Gothwal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
         body {
@@ -42,44 +43,75 @@
                 <main class="flex-1 px-4">
                     <div class="container mx-auto h-full">
                         <!-- Grid: 1 column mobile, 2 columns at lg+ -->
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full items-center lg:items-center">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 h-full items-center">
 
-                            <div
-                                class="order-2 lg:order-1 flex flex-col items-center justify-center text-center gap-y-4 lg:items-start lg:justify-center lg:text-left lg:ml-[6vw] xl:ml-[8vw] min-h-[60vh] lg:min-h-0">
+                            <div class="order-2 lg:order-1 flex flex-col items-center justify-center text-center
+         gap-y-3
+         lg:gap-y-4
+         lg:items-start lg:justify-center lg:text-left
+         lg:ml-[6vw] xl:ml-[8vw]
+         min-h-0 lg:min-h-[60vh]">
                                 <div class="text-lg">
                                     Hi there! I’m <span class="font-bold">Santosh</span>
                                     Gothwal
                                 </div>
                                 <div class="text-3xl md:text-5xl font-normal leading-tight">
-                                    <span class="font-bold">DNA Research for Novel Chemotherapy Target Development and Cancer Treatments</span>
+                                    <span class="font-bold">DNA Research for Novel Chemotherapy Target Development and
+                                        Cancer Treatments</span>
                                 </div>
                             </div>
 
-                            <div class="hidden lg:flex order-1 lg:order-2 lg:items-start lg:justify-end">
-                                <img src="portrait.jpg" alt="Portrait / accent"
-                                    class="w-full max-w-[520px] object-contain lg:mt-4 rounded-2xl shadow-lg" loading="eager"
-                                    decoding="async" />
+                            <div class="order-1 lg:order-2 flex justify-center lg:justify-end lg:items-start">
+
+                                <img src="portrait.jpg" alt="Portrait / accent" loading="eager" decoding="async" class="
+      w-[180px] sm:w-[220px]        /* mobile size */
+      lg:w-full lg:max-w-[520px]    /* desktop size */
+      object-contain
+      rounded-2xl
+      shadow-md lg:shadow-lg
+      opacity-90
+      lg:mt-4
+    " />
+
                             </div>
+
 
                         </div>
                     </div>
                 </main>
 
                 <!-- Logos section -->
+                <!-- Logos section -->
                 <section id="logos" class="bg-[#EDEEE7] py-8 flex-shrink-0">
                     <div class="container mx-auto px-4">
-                        <div class="grid grid-cols-2 md:grid-cols-6 gap-6 items-center justify-center">
-                            <img src="image6.png" alt="Image 6" class="max-h-[150px] object-contain mx-auto rounded" />
-                            <img src="image7.png" alt="Image 7" class="max-h-[150px] object-contain mx-auto rounded" />
-                            <img src="image8.png" alt="Image 8" class="max-h-[150px] object-contain mx-auto rounded" />
-                            <img src="image9.png" alt="Image 9" class="max-h-[150px] object-contain mx-auto rounded" />
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-center">
+
+                            <img src="image6.png" alt="Image 6"
+                                class="max-h-[90px] max-w-[140px] w-auto object-contain mx-auto rounded" />
+
+                            <img src="image7.png" alt="Image 7"
+                                class="max-h-[90px] max-w-[140px] w-auto object-contain mx-auto rounded" />
+
+                            <img src="image8.png" alt="Image 8"
+                                class="max-h-[90px] max-w-[140px] w-auto object-contain mx-auto rounded" />
+
+                            <!-- <img src="image9.png" alt="Image 9"
+           class="max-h-[90px] max-w-[140px] w-auto object-contain mx-auto rounded" /> -->
+
                             <img src="image10.png" alt="Image 10"
-                                class="max-h-[150px] object-contain mx-auto rounded" />
-                            <img src="image11.png" alt="Image 11"
-                                class="max-h-[150px] object-contain mx-auto rounded" />
+                                class="max-h-[90px] max-w-[140px] w-auto object-contain mx-auto rounded" />
+
+                            <!-- <img src="image11.png" alt="Image 11"
+           class="max-h-[90px] max-w-[140px] w-auto object-contain mx-auto rounded" /> -->
+
                         </div>
                     </div>
                 </section>
+
+
+
+
+
             </section>
 
             <section class="bg-white flex flex-col gap-10 px-6 py-12">
@@ -162,39 +194,39 @@
 
     <script src="common/include.js"></script>
 
-  <script>
-    loadHTML("navbar", "common/navbar.html").then(() => {
+    <script>
+        loadHTML("navbar", "common/navbar.html").then(() => {
 
-      const navToggle = document.getElementById('navToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      const backdrop = document.getElementById('backdrop');
+            const navToggle = document.getElementById('navToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const backdrop = document.getElementById('backdrop');
 
-    function openMenu() {
-      mobileMenu.classList.remove('scale-y-0', 'opacity-0');
-      mobileMenu.classList.add('scale-y-100', 'opacity-100');
+            function openMenu() {
+                mobileMenu.classList.remove('scale-y-0', 'opacity-0');
+                mobileMenu.classList.add('scale-y-100', 'opacity-100');
 
-      backdrop.classList.remove('opacity-0', 'pointer-events-none');
-      backdrop.classList.add('opacity-100');
-    }
+                backdrop.classList.remove('opacity-0', 'pointer-events-none');
+                backdrop.classList.add('opacity-100');
+            }
 
-    function closeMenu() {
-      mobileMenu.classList.add('scale-y-0', 'opacity-0');
-      mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+            function closeMenu() {
+                mobileMenu.classList.add('scale-y-0', 'opacity-0');
+                mobileMenu.classList.remove('scale-y-100', 'opacity-100');
 
-      backdrop.classList.add('opacity-0', 'pointer-events-none');
-      backdrop.classList.remove('opacity-100');
-    }
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+                backdrop.classList.remove('opacity-100');
+            }
 
-      navToggle?.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.contains('scale-y-100');
-        isOpen ? closeMenu() : openMenu();
-      });
+            navToggle?.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('scale-y-100');
+                isOpen ? closeMenu() : openMenu();
+            });
 
-      backdrop?.addEventListener('click', closeMenu);
-    });
+            backdrop?.addEventListener('click', closeMenu);
+        });
 
-    loadHTML("footer", "common/footer.html");
-  </script>
+        loadHTML("footer", "common/footer.html");
+    </script>
     <!-- GSAP core (local) -->
     <script src="assets/gsap-public/minified/gsap.min.js"></script>
 
