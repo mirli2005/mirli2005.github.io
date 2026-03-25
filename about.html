@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About | GC Biotech Japan</title>
+
+  <meta name="description"
+    content="Learn more about GC Biotech Japan, its founder, team vision, research direction, and strategic healthcare partnerships." />
+
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="flex flex-col min-h-screen bg-white text-slate-900">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+
+  <div id="navbar"></div>
+
+  <script src="common/include.js"></script>
+  <script>
+    loadHTML("navbar", "common/navbar.html").then(() => {
+      const navToggle = document.getElementById('navToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const backdrop = document.getElementById('backdrop');
+
+      function openMenu() {
+        mobileMenu.classList.remove('scale-y-0', 'opacity-0');
+        mobileMenu.classList.add('scale-y-100', 'opacity-100');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.add('scale-y-0', 'opacity-0');
+        mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+      }
+
+      navToggle?.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('scale-y-100');
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      backdrop?.addEventListener('click', closeMenu);
+    });
+  </script>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- HERO -->
+      <section class="relative overflow-hidden pt-28 pb-20 md:pt-32 md:pb-24 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <div class="absolute -top-20 -left-16 h-72 w-72 rounded-full bg-white blur-3xl"></div>
+          <div class="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-emerald-200 blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            <div class="lg:col-span-8">
+              <p class="hero-reveal text-sm md:text-base uppercase tracking-[0.25em] text-white/80 mb-4">
+                About GC Biotech Japan
+              </p>
+
+              <h1 class="hero-reveal text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+                A biotechnology initiative shaped by research vision, healthcare need, and collaborative growth.
+              </h1>
+
+              <p class="hero-reveal mt-6 text-base sm:text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed">
+                GC Biotech is being built around scientific credibility, translational healthcare relevance,
+                and partnerships that can support diagnostics, research services, and broader healthcare impact.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4">
+              <div class="hero-reveal rounded-[2rem] border border-white/15 bg-white/5 backdrop-blur p-8 shadow-2xl">
+                <div class="rounded-[1.5rem] bg-gradient-to-br from-teal-700 to-emerald-600 p-8 text-center border border-white/10">
+                  <p class="text-sm uppercase tracking-[0.2em] text-white/80 mb-3">
+                    About
+                  </p>
+                  <p class="text-3xl font-bold leading-tight">
+                    Leadership, network, and direction
+                  </p>
+                  <p class="mt-5 text-white/85 leading-relaxed">
+                    Built through founder-led vision, specialist collaboration, and strategic distribution support.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER -->
+      <section class="reveal-section bg-white px-6 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+            <div class="lg:col-span-4">
+              <div class="reveal-item lg:sticky lg:top-28">
+                <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100">
+                  <img
+                    src="images/santosh.png"
+                    alt="Dr. Santosh Kumar Gothwal"
+                    class="w-full aspect-[4/5] object-cover object-center"
+                  />
+                </div>
+
+                <div class="mt-5 bg-[#EAF6F3] rounded-2xl p-5 border border-teal-100 shadow-sm">
+                  <p class="text-xl font-bold text-slate-900">Dr. Santosh Kumar Gothwal, PhD</p>
+                  <p class="text-sm text-slate-600 mt-1">Founder and scientific lead</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8">
+              <div class="reveal-item inline-flex items-center rounded-full bg-teal-50 text-teal-700 px-4 py-2 text-sm font-semibold border border-teal-100">
+                Founder Profile
+              </div>
+
+              <h2 class="reveal-item mt-5 text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                Scientific ambition informed by real healthcare challenges
+              </h2>
+
+              <div class="mt-8 space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed">
+                <p class="reveal-item">
+                  GC Biotech is being developed around the leadership and long-term vision of Dr. Santosh Kumar Gothwal, PhD,
+                  whose scientific direction centers on biotechnology, diagnostics, translational relevance, and accessible healthcare innovation.
+                </p>
+
+                <p class="reveal-item">
+                  The founder profile you shared emphasizes both scientific aspiration and social motivation. That combination is important:
+                  the goal is not only to pursue biotechnology at a high research level, but to connect it with healthcare systems and populations
+                  that can benefit from earlier diagnosis, better screening, and more practical innovation.
+                </p>
+
+                <p class="reveal-item">
+                  The materials also point to a personal background connected to Jaipur, India, reinforcing the company’s attention to healthcare
+                  access, regional need, and long-term social value alongside scientific progress.
+                </p>
+
+                <p class="reveal-item">
+                  This founder-led model gives GC Biotech a clear identity: research-driven, mission-oriented, and focused on building credible
+                  pathways between science, diagnostics, partnerships, and healthcare implementation.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="reveal-section bg-[#F7FAF9] px-6 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="reveal-item max-w-3xl mx-auto text-center">
+            <p class="text-sm uppercase tracking-[0.18em] text-teal-700 font-semibold">
+              Team and Network
+            </p>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">
+              A growing structure built around complementary expertise
+            </h2>
+            <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              Your slide suggests not only a founder profile, but also a broader team and advisory network across contract research,
+              pollution control, bioinformatics, and director-level roles.
+            </p>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <div class="h-12 w-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
+                01
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                Shama Bansod
+              </h3>
+              <p class="mt-3 text-slate-600 leading-relaxed">
+                Director, contract research, with a role that supports research-oriented partnership and execution pathways.
+              </p>
+            </div>
+
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <div class="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                02
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                Prof. Kedar Mahapatra
+              </h3>
+              <p class="mt-3 text-slate-600 leading-relaxed">
+                Director, pollution control, bringing additional domain depth and cross-sector credibility.
+              </p>
+            </div>
+
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <div class="h-12 w-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg">
+                03
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                Bioinformatics Leadership
+              </h3>
+              <p class="mt-3 text-slate-600 leading-relaxed">
+                A director-level bioinformatics function aligned with sequencing analysis, computational workflows, and data interpretation.
+              </p>
+            </div>
+
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <div class="h-12 w-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-lg">
+                04
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                Strategic Director Roles
+              </h3>
+              <p class="mt-3 text-slate-600 leading-relaxed">
+                Additional director-level positions indicate a company structure intended to expand across multiple operational and scientific areas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS -->
+      <section class="reveal-section bg-white px-6 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <div class="lg:col-span-4">
+              <div class="reveal-item lg:sticky lg:top-28">
+                <p class="text-sm uppercase tracking-[0.18em] text-teal-700 font-semibold">
+                  Licensing and Credentials
+                </p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                  Documents that reinforce operating credibility
+                </h2>
+                <p class="mt-5 text-slate-600 leading-relaxed">
+                  The material shared includes certification and licensing-related documents connected to DR Pharma,
+                  helping position the broader network behind GC Biotech as operationally grounded rather than purely conceptual.
+                </p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="reveal-item rounded-3xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+                  <img
+                    src="images/thing_1.png"
+                    alt="DR Pharma certificate or license document"
+                    class="w-full object-cover"
+                  />
+                </div>
+
+                <div class="reveal-item rounded-3xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+                  <img
+                    src="images/thing_2.png"
+                    alt="DR Pharma experience or business document"
+                    class="w-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="reveal-item mt-6 rounded-3xl bg-[#EAF6F3] border border-teal-100 p-6">
+                <p class="text-slate-700 leading-relaxed">
+                  Rather than listing documents as isolated proof points, this section presents them as part of a wider credibility framework:
+                  regulatory readiness, real distribution experience, and an existing operational base that can support future scientific and
+                  healthcare-focused growth.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DR PHARMA EXPERIENCE -->
+      <section class="reveal-section bg-slate-900 text-white px-6 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="reveal-item max-w-4xl">
+            <p class="text-sm uppercase tracking-[0.18em] text-emerald-300/90 font-semibold">
+              Strategic Distribution Background
+            </p>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
+              Distribution and supply-chain experience that strengthens future execution potential
+            </h2>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <div class="reveal-item rounded-3xl border border-white/10 bg-white/5 p-8">
+              <h3 class="text-2xl font-bold">
+                Established expertise
+              </h3>
+              <ul class="mt-5 space-y-3 text-white/85 leading-relaxed">
+                <li>• More than 20 years of experience in distribution of medical devices, life-saving drugs, and diagnostic kits.</li>
+                <li>• End-to-end supply chain management experience with emphasis on delivery continuity and customer trust.</li>
+                <li>• Operational familiarity with time-sensitive and regulated healthcare products.</li>
+              </ul>
+            </div>
+
+            <div class="reveal-item rounded-3xl border border-white/10 bg-gradient-to-br from-teal-800 to-cyan-700 p-8">
+              <h3 class="text-2xl font-bold">
+                Business and network strength
+              </h3>
+              <ul class="mt-5 space-y-3 text-white/90 leading-relaxed">
+                <li>• Long-term business growth built through sustained healthcare-sector relationships in India.</li>
+                <li>• Experience working with hospitals, diagnostic laboratories, and pharma-linked partners.</li>
+                <li>• Broad client-network relevance across both government and private healthcare sectors.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="reveal-item mt-8 rounded-3xl border border-white/10 bg-white/5 p-8">
+            <h3 class="text-2xl font-bold">
+              Why this matters for GC Biotech
+            </h3>
+            <p class="mt-5 text-white/80 leading-relaxed">
+              This experience matters because it adds an execution layer to the company story. GC Biotech is not being positioned only
+              as a scientific idea, but as an initiative that can grow through credible market understanding, logistics awareness,
+              institutional connectivity, and healthcare-distribution knowledge.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SUMMARY -->
+      <section class="reveal-section bg-[#F7FAF9] px-6 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="reveal-item max-w-3xl mx-auto text-center">
+            <p class="text-sm uppercase tracking-[0.18em] text-teal-700 font-semibold">
+              What this page says about the company
+            </p>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">
+              GC Biotech is being built on three reinforcing layers
+            </h2>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Founder-led scientific vision
+              </h3>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                A research-driven company idea shaped by biotechnology, diagnostics, and translational healthcare goals.
+              </p>
+            </div>
+
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Team and advisory capability
+              </h3>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                A growing network of director-level roles and domain expertise across multiple operational and scientific areas.
+              </p>
+            </div>
+
+            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+              <h3 class="text-2xl font-bold text-slate-900">
+                Execution-oriented partnerships
+              </h3>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                Documented distribution and supply-chain experience that can support future commercialization and healthcare reach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="reveal-section bg-gradient-to-r from-teal-700 to-emerald-600 text-white px-6 py-20 md:py-24">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="reveal-item text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            A biotechnology initiative supported by vision, team structure, and real execution potential
+          </h2>
+
+          <p class="reveal-item mt-5 text-white/85 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+            Explore the mission, services, and collaboration opportunities behind GC Biotech’s long-term direction.
+          </p>
+
+          <div class="reveal-item mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/mission.html"
+              class="inline-block bg-white text-teal-700 font-semibold px-7 py-3 rounded-xl shadow hover:bg-slate-100 transition">
+              View Mission
+            </a>
+
+            <a href="/contact.html"
+              class="inline-block border border-white/30 text-white font-semibold px-7 py-3 rounded-xl hover:bg-white/10 transition">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer"></div>
+    </div>
+  </div>
+
+  <script>
+    loadHTML("footer", "common/footer.html");
+  </script>
+
+  <script src="assets/gsap-public/minified/gsap.min.js"></script>
+  <script src="assets/gsap-public/minified/ScrollTrigger.min.js"></script>
+  <script src="assets/gsap-public/minified/ScrollSmoother.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    ScrollSmoother.create({
+      smooth: 0.8,
+      smoothTouch: 0.1,
+      effects: true
+    });
+
+    window.addEventListener("load", () => {
+      gsap.set(".hero-reveal", { opacity: 1, y: 0 });
+
+      gsap.utils.toArray(".reveal-section").forEach((section) => {
+        const items = section.querySelectorAll(".reveal-item");
+
+        gsap.set(items, { opacity: 0, y: 28 });
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 72%",
+          onEnter: () => {
+            gsap.to(items, {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              stagger: 0.12,
+              ease: "power2.out",
+              overwrite: "auto"
+            });
+          },
+          onLeaveBack: () => {
+            gsap.set(items, { opacity: 0, y: 28 });
+          }
+        });
+      });
+
+      ScrollTrigger.refresh();
+    });
+  </script>
+
+</body>
+</html>
