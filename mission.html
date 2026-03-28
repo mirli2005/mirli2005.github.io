@@ -22,10 +22,58 @@
 <body class="flex flex-col min-h-screen bg-white text-slate-900">
 
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .dna-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.18;
+  }
+
+  .dna-strand {
+    position: absolute;
+    top: -10%;
+    width: 2px;
+    height: 120%;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.28), transparent);
+    animation: dnaFloat 10s linear infinite;
+  }
+
+  .dna-strand::before,
+  .dna-strand::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    margin-left: -11px;
+    border: 2px solid rgba(255,255,255,0.28);
+    border-radius: 9999px;
+  }
+
+  .dna-strand::before {
+    top: 20%;
+  }
+
+  .dna-strand::after {
+    top: 60%;
+  }
+
+  .dna-1 { left: 12%; animation-delay: 0s; }
+  .dna-2 { left: 32%; animation-delay: 2s; }
+  .dna-3 { left: 54%; animation-delay: 4s; }
+  .dna-4 { left: 76%; animation-delay: 1s; }
+
+  @keyframes dnaFloat {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    50%  { transform: translateY(18px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+</style>
 
   <div id="navbar"></div>
 
@@ -174,75 +222,78 @@
       </section>
 
       <!-- ========================================= -->
-      <!-- MISSION PILLARS -->
-      <!-- ========================================= -->
-      <section class="reveal-section bg-slate-50 px-6 py-16 md:py-24">
-        <div class="max-w-7xl mx-auto">
-          <div class="reveal-item max-w-3xl mx-auto text-center">
-            <p class="text-sm uppercase tracking-[0.2em] text-teal-700 font-semibold">
-              Mission in Action
-            </p>
-            <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">
-              The principles guiding our work
-            </h2>
-            <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
-              Our mission is shaped by a broader commitment to equitable innovation, clinical relevance, and scalable public-health impact.
-            </p>
-          </div>
+<!-- MISSION PILLARS -->
+<!-- ========================================= -->
+<section class="reveal-section bg-slate-50 px-6 py-16 md:py-24">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal-item max-w-3xl mx-auto text-center">
+      <p class="text-sm uppercase tracking-[0.2em] text-teal-700 font-semibold">
+        Mission in Action
+      </p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">
+        The principles guiding our work
+      </h2>
+      <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+        Our mission is built around accessible healthcare innovation, meaningful scientific translation,
+        and long-term benefit for broader populations.
+      </p>
+    </div>
 
-          <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
-              <div class="h-12 w-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
-                01
-              </div>
-              <h3 class="mt-5 text-xl font-bold text-slate-900">
-                Early diagnosis
-              </h3>
-              <p class="mt-3 text-slate-600 leading-relaxed">
-                Supporting earlier detection pathways that improve clinical decisions and reduce disease burden.
-              </p>
-            </div>
+  <!-- 01 -->
+  <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+    <div class="h-12 w-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
+      01
+    </div>
 
-            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
-              <div class="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
-                02
-              </div>
-              <h3 class="mt-5 text-xl font-bold text-slate-900">
-                Precision medicine
-              </h3>
-              <p class="mt-3 text-slate-600 leading-relaxed">
-                Building solutions responsive to patient-specific mutations, biomarker profiles, and therapy resistance.
-              </p>
-            </div>
+    <h3 class="mt-5 text-xl font-bold text-slate-900">
+      Equitable Access
+    </h3>
 
-            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
-              <div class="h-12 w-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg">
-                03
-              </div>
-              <h3 class="mt-5 text-xl font-bold text-slate-900">
-                Preventive genomics
-              </h3>
-              <p class="mt-3 text-slate-600 leading-relaxed">
-                Expanding the role of prenatal, postnatal, and predictive genetic analysis in practical healthcare delivery.
-              </p>
-            </div>
+    <p class="mt-3 text-slate-600 leading-relaxed">
+      Making advanced biotechnology solutions accessible beyond limited systems.<br>
+      Expanding reach to diverse populations through scalable and practical approaches.
+    </p>
+  </div>
 
-            <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
-              <div class="h-12 w-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-lg">
-                04
-              </div>
-              <h3 class="mt-5 text-xl font-bold text-slate-900">
-                Global accessibility
-              </h3>
-              <p class="mt-3 text-slate-600 leading-relaxed">
-                Ensuring biotechnology advances become sustainable and reachable beyond limited elite systems.
-              </p>
-            </div>
 
-          </div>
-        </div>
-      </section>
+  <!-- 02 -->
+  <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+    <div class="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+      02
+    </div>
+
+    <h3 class="mt-5 text-xl font-bold text-slate-900">
+      Preventive Care
+    </h3>
+
+    <p class="mt-3 text-slate-600 leading-relaxed">
+      Strengthening early detection and risk identification through modern diagnostics.<br>
+      Reducing long-term disease burden with proactive and data-driven healthcare strategies.
+    </p>
+  </div>
+
+
+  <!-- 03 -->
+  <div class="reveal-item rounded-3xl bg-white p-7 shadow-sm border border-slate-200">
+    <div class="h-12 w-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg">
+      03
+    </div>
+
+    <h3 class="mt-5 text-xl font-bold text-slate-900">
+      Translational Medicine
+    </h3>
+
+    <p class="mt-3 text-slate-600 leading-relaxed">
+      Bridging laboratory discoveries with real clinical applications.<br>
+      Converting research insights into actionable diagnostics and therapies.
+    </p>
+  </div>
+
+</div>
+  </div>
+</section>
 
       <!-- ========================================= -->
       <!-- STRATEGIC FOCUS -->
