@@ -8,7 +8,7 @@
   <title>GC Biotech Japan | Biotechnology for Accessible Healthcare</title>
 
   <meta name="description"
-    content="GC Biotech Japan is focused on biotechnology, diagnostics, precision medicine, and accessible healthcare innovation through customized research services and translational scientific support." />
+    content="GC Biotech Japan provides customized biotechnology solutions for academic and industrial research, including molecular biology, bioinformatics, diagnostics, and translational scientific support." />
 
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
@@ -26,15 +26,15 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* DNA hero animation */
+    /* DNA hero animation - matched to services */
     .dna-scene {
       position: absolute;
-      top: 0;
-      right: -3%;
-      width: min(36vw, 360px);
+      top: 2%;
+      left: 2%;
+      width: min(38vw, 390px);
       height: 100%;
       pointer-events: none;
-      opacity: 0.28;
+      opacity: 0.34;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -44,7 +44,7 @@
     .dna-helix {
       position: relative;
       width: 100%;
-      height: 78%;
+      height: 80%;
       transform-style: preserve-3d;
       display: flex;
       flex-direction: column;
@@ -63,36 +63,37 @@
       content: "";
       position: absolute;
       top: 50%;
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       border-radius: 9999px;
       transform: translateY(-50%);
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(255, 255, 255, 0.12);
     }
 
     .dna-row::before {
       left: 0;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.98);
     }
 
     .dna-row::after {
       right: 0;
-      background: rgba(167, 243, 208, 0.95);
+      background: rgba(16, 185, 129, 0.98);
     }
 
     .dna-bar {
       position: absolute;
-      left: 14px;
-      right: 14px;
+      left: 16px;
+      right: 16px;
       top: 50%;
-      height: 2px;
+      height: 3px;
       transform: translateY(-50%);
       background: linear-gradient(90deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.9),
-          rgba(167, 243, 208, 0.95),
-          rgba(255, 255, 255, 0.1));
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.95),
+          rgba(16, 185, 129, 0.98),
+          rgba(255, 255, 255, 0.15));
       border-radius: 9999px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
     }
 
     .dna-row:nth-child(1) { animation-delay: -0.0s; }
@@ -121,8 +122,8 @@
       }
 
       25% {
-        transform: rotateY(90deg) scaleX(0.45);
-        opacity: 0.58;
+        transform: rotateY(90deg) scaleX(0.42);
+        opacity: 0.62;
       }
 
       50% {
@@ -131,8 +132,8 @@
       }
 
       75% {
-        transform: rotateY(270deg) scaleX(0.45);
-        opacity: 0.58;
+        transform: rotateY(270deg) scaleX(0.42);
+        opacity: 0.62;
       }
 
       100% {
@@ -141,11 +142,27 @@
       }
     }
 
+    .home-card {
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .home-card:hover,
+    .home-card:focus-within {
+      transform: translateY(-4px) scale(1.018);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.10);
+      border-color: rgba(13, 148, 136, 0.35);
+    }
+
+    .home-card:hover h3,
+    .home-card:focus-within h3 {
+      color: rgb(13 148 136);
+    }
+
     @media (max-width: 1023px) {
       .dna-scene {
         width: min(46vw, 260px);
-        right: -8%;
-        opacity: 0.2;
+        left: 0%;
+        opacity: 0.24;
       }
 
       .dna-row {
@@ -154,21 +171,21 @@
 
       .dna-row::before,
       .dna-row::after {
-        width: 11px;
-        height: 11px;
+        width: 12px;
+        height: 12px;
       }
 
       .dna-bar {
-        left: 11px;
-        right: 11px;
+        left: 12px;
+        right: 12px;
       }
     }
 
     @media (max-width: 639px) {
       .dna-scene {
-        width: 170px;
-        right: -16px;
-        opacity: 0.16;
+        width: 165px;
+        left: -18px;
+        opacity: 0.18;
       }
 
       .dna-helix {
@@ -181,14 +198,14 @@
 
       .dna-row::before,
       .dna-row::after {
-        width: 9px;
-        height: 9px;
+        width: 10px;
+        height: 10px;
       }
 
       .dna-bar {
-        left: 9px;
-        right: 9px;
-        height: 1.5px;
+        left: 10px;
+        right: 10px;
+        height: 2px;
       }
     }
   </style>
@@ -227,7 +244,8 @@
     <div id="smooth-content">
 
       <!-- HERO -->
-      <section class="relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-18 md:pt-32 md:pb-24 bg-gradient-to-br from-slate-950 via-teal-900 to-cyan-800 text-white">
+      <section
+        class="relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-18 md:pt-32 md:pb-24 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
         <div class="dna-scene" aria-hidden="true">
           <div class="dna-helix">
             <div class="dna-row"><span class="dna-bar"></span></div>
@@ -252,103 +270,182 @@
         </div>
 
         <div class="absolute inset-0 opacity-10 pointer-events-none">
-          <div class="absolute -top-20 -left-16 h-56 w-56 sm:h-72 sm:w-72 rounded-full bg-white blur-3xl"></div>
+          <div class="absolute -top-20 -right-16 h-56 w-56 sm:h-72 sm:w-72 rounded-full bg-white blur-3xl"></div>
           <div class="absolute bottom-0 right-0 h-56 w-56 sm:h-80 sm:w-80 rounded-full bg-emerald-200 blur-3xl"></div>
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="max-w-4xl">
+          <div class="max-w-4xl ml-auto">
             <p class="hero-reveal text-[11px] sm:text-sm md:text-base uppercase tracking-[0.18em] sm:tracking-[0.24em] text-white/75 mb-3 sm:mb-4">
               GC Biotech Japan
             </p>
 
             <h1 class="hero-reveal text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.15] sm:leading-tight">
-              Biotechnology with a clearer purpose:
-              making advanced healthcare more reachable, more useful, and more equitable.
+              Customized biotechnology services for academic and industrial research.
             </h1>
 
             <p class="hero-reveal mt-4 sm:mt-6 text-sm sm:text-base md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              GC Biotech is focused on translating scientific progress into practical healthcare value through
-              diagnostics, customized research services, and translational biotechnology support.
+              GC Biotech provides customized solutions for academic research groups, industrial R&amp;D teams,
+              biotechnology startups, and collaborative scientific projects. Explore our services
+              in molecular biology, bioinformatics, diagnostics, and contract research support.
             </p>
 
             <div class="hero-reveal mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/about.html"
-                class="inline-block bg-white text-teal-700 font-semibold px-6 sm:px-7 py-3 rounded-xl shadow hover:bg-slate-100 transition">
-                About Us
-              </a>
-
               <a href="/services.html"
-                class="inline-block border border-white/35 text-white font-semibold px-6 sm:px-7 py-3 rounded-xl hover:bg-white/10 transition">
+                class="inline-block bg-white text-teal-700 font-semibold px-6 sm:px-7 py-3 rounded-xl shadow hover:bg-slate-100 transition">
                 Explore Services
               </a>
+
+              <a href="/about.html"
+                class="inline-block border border-white/35 text-white font-semibold px-6 sm:px-7 py-3 rounded-xl hover:bg-white/10 transition">
+                About Us
+              </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES PREVIEW -->
+      <section class="reveal-section bg-slate-50 px-4 sm:px-6 py-12 sm:py-14 md:py-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="reveal-item max-w-3xl mx-auto text-center">
+            <p class="text-xs sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.18em] text-teal-700 font-semibold">
+              Core Services
+            </p>
+
+            <h2 class="mt-2 sm:mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+              Core Services
+            </h2>
+
+            <p class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+              Our services are structured to support academic research groups, industrial R&amp;D teams,
+              biotechnology startups, and collaborative scientific projects.
+            </p>
+          </div>
+
+          <div class="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+
+            <div class="reveal-item home-card rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+                Molecular Biology Research Services
+              </h3>
+              <ul class="mt-4 sm:mt-5 space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed">
+                <li>• Gene cloning and plasmid construction</li>
+                <li>• Recombinant protein expression and purification</li>
+                <li>• Cell line generation, including knockout models</li>
+                <li>• Over-expression cell lines, both constitutive and conditional</li>
+              </ul>
+            </div>
+
+            <div class="reveal-item home-card rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+                Contract Research Services
+              </h3>
+              <ul class="mt-4 sm:mt-5 space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed">
+                <li>• Experimental design and project planning</li>
+                <li>• Academic research collaboration support</li>
+                <li>• Outsourced biotechnology research services</li>
+                <li>• Drug screening and translational research studies</li>
+              </ul>
+            </div>
+
+            <div class="reveal-item home-card rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+                Bioinformatics Analysis
+              </h3>
+              <ul class="mt-4 sm:mt-5 space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed">
+                <li>• Single-cell RNA sequencing analysis</li>
+                <li>• NGS, RNA-seq, and ChIP analysis</li>
+                <li>• Library preparation support</li>
+                <li>• Sequencing service coordination</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="reveal-item mt-6 sm:mt-8 text-center">
+            <a href="/services.html"
+              class="inline-block bg-teal-600 text-white font-semibold px-6 sm:px-7 py-3 rounded-xl shadow hover:bg-teal-700 transition">
+              View All Services
+            </a>
           </div>
         </div>
       </section>
 
       <!-- THREE PRINCIPLES -->
-      <section class="reveal-section bg-slate-50 px-4 sm:px-6 py-12 sm:py-14 md:py-24">
+      <section class="reveal-section bg-white px-4 sm:px-6 py-12 sm:py-14 md:py-24">
         <div class="max-w-7xl mx-auto">
-          <div class="reveal-item max-w-3xl mx-auto text-center">
-            <p class="text-xs sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.18em] text-teal-700 font-semibold">
-              Core Purpose
-            </p>
-            <h2 class="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-              The principles guiding our direction
-            </h2>
-            <p class="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-              GC Biotech is being shaped around three core principles that connect scientific seriousness with practical healthcare value.
-            </p>
-          </div>
 
-          <div class="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch">
 
-            <div class="reveal-item rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
-              <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm sm:text-lg">
-                01
-              </div>
-              <h3 class="mt-4 sm:mt-5 text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
-                Equitable Access
-              </h3>
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Making advanced biotechnology solutions more reachable beyond highly selective systems.<br>
-                Expanding access through practical, scalable, and scientifically grounded approaches.
+            <div class="reveal-item lg:col-span-4 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-800 text-white p-6 sm:p-7 md:p-8 shadow-sm">
+              <p class="text-xs sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.2em] text-emerald-200 font-semibold">
+                Core Purpose
+              </p>
+
+              <h2 class="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+                The principles guiding our direction
+              </h2>
+
+              <p class="mt-4 text-sm sm:text-base text-white/80 leading-relaxed">
+                GC Biotech is being shaped around three core principles that connect scientific seriousness with practical healthcare value.
               </p>
             </div>
 
-            <div class="reveal-item rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
-              <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm sm:text-lg">
-                02
-              </div>
-              <h3 class="mt-4 sm:mt-5 text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
-                Preventive Care
-              </h3>
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Strengthening earlier detection and risk identification through diagnostics and screening.<br>
-                Supporting more proactive, data-driven, and timely healthcare decision-making.
-              </p>
-            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
 
-            <div class="reveal-item rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
-              <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-sm sm:text-lg">
-                03
-              </div>
-              <h3 class="mt-4 sm:mt-5 text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
-                Translational Medicine
-              </h3>
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Connecting laboratory discoveries with practical clinical and diagnostic applications.<br>
-                Turning scientific insight into useful healthcare tools and meaningful outcomes.
-              </p>
-            </div>
+              <div class="reveal-item rounded-2xl sm:rounded-3xl bg-[#EAF6F3] p-5 sm:p-6 shadow-sm border border-teal-100">
+                <div class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white text-teal-700 flex items-center justify-center font-bold text-sm sm:text-base shadow-sm">
+                  01
+                </div>
 
+                <h3 class="mt-4 text-lg sm:text-xl font-bold text-slate-900">
+                  Equitable Access
+                </h3>
+
+                <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                  Making advanced biotechnology solutions more reachable beyond highly selective systems.<br>
+                  Expanding access through practical, scalable, and scientifically grounded approaches.
+                </p>
+              </div>
+
+              <div class="reveal-item rounded-2xl sm:rounded-3xl bg-[#F2FBF8] p-5 sm:p-6 shadow-sm border border-emerald-100">
+                <div class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white text-emerald-700 flex items-center justify-center font-bold text-sm sm:text-base shadow-sm">
+                  02
+                </div>
+
+                <h3 class="mt-4 text-lg sm:text-xl font-bold text-slate-900">
+                  Preventive Care
+                </h3>
+
+                <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                  Strengthening earlier detection and risk identification through diagnostics and screening.<br>
+                  Supporting more proactive, data-driven, and timely healthcare decision-making.
+                </p>
+              </div>
+
+              <div class="reveal-item rounded-2xl sm:rounded-3xl bg-[#EFFAFD] p-5 sm:p-6 shadow-sm border border-cyan-100">
+                <div class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white text-cyan-700 flex items-center justify-center font-bold text-sm sm:text-base shadow-sm">
+                  03
+                </div>
+
+                <h3 class="mt-4 text-lg sm:text-xl font-bold text-slate-900">
+                  Translational Medicine
+                </h3>
+
+                <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                  Bridging laboratory discoveries with practical clinical and diagnostic applications.<br>
+                  Turning scientific insight into useful healthcare tools and meaningful outcomes.
+                </p>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
 
       <!-- COMPANY DIRECTION -->
-      <section class="reveal-section bg-white px-4 sm:px-6 py-12 sm:py-14 md:py-24">
+      <section class="reveal-section bg-slate-50 px-4 sm:px-6 py-12 sm:py-14 md:py-24">
         <div class="max-w-7xl mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             <div class="lg:col-span-7">
@@ -382,54 +479,6 @@
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICES PREVIEW -->
-      <section class="reveal-section bg-slate-50 px-4 sm:px-6 py-12 sm:py-14 md:py-24">
-        <div class="max-w-7xl mx-auto">
-          <div class="reveal-item max-w-3xl mx-auto text-center">
-            <p class="text-xs sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.18em] text-teal-700 font-semibold">
-              Services
-            </p>
-            <h2 class="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-              Customized biotechnology services for academic and industrial research
-            </h2>
-            <p class="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Our services are structured to support request-driven research needs through molecular biology,
-              contract research, bioinformatics, diagnostics, and collaborative scientific support.
-            </p>
-          </div>
-
-          <div class="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
-            <div class="reveal-item rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
-              <h3 class="text-lg sm:text-xl font-bold text-slate-900">Molecular Biology</h3>
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Cloning, protein purification, cell line generation, and over-expression systems.
-              </p>
-            </div>
-
-            <div class="reveal-item rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
-              <h3 class="text-lg sm:text-xl font-bold text-slate-900">Contract Research</h3>
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Outsourced biotechnology research services and collaborative scientific support.
-              </p>
-            </div>
-
-            <div class="reveal-item rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-7 shadow-sm border border-slate-200">
-              <h3 class="text-lg sm:text-xl font-bold text-slate-900">Bioinformatics & Diagnostics</h3>
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Sequencing analysis, biomarker development, and healthcare-oriented translational workflows.
-              </p>
-            </div>
-          </div>
-
-          <div class="reveal-item mt-6 sm:mt-8 text-center">
-            <a href="/services.html"
-              class="inline-block bg-teal-600 text-white font-semibold px-6 sm:px-7 py-3 rounded-xl shadow hover:bg-teal-700 transition">
-              View All Services
-            </a>
           </div>
         </div>
       </section>
