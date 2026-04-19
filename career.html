@@ -9,7 +9,10 @@
 
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
   <style>
@@ -24,17 +27,15 @@
   <!-- NAVBAR -->
   <div id="navbar"></div>
   <script src="common/include.js"></script>
-  <script>
-    loadHTML("navbar", "common/navbar.html");
-  </script>
 
+  <!-- SMOOTH WRAPPER -->
   <div id="smooth-wrapper">
     <div id="smooth-content">
 
       <!-- HERO -->
-      <section class="reveal-section pt-32 pb-24 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
+      <section class="relative overflow-hidden pt-40 sm:pt-44 md:pt-48 pb-24 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
         <div class="max-w-7xl mx-auto px-6">
-          <div class="max-w-4xl ml-auto mt-8">
+          <div class="max-w-4xl ml-auto">
 
             <p class="hero-reveal text-sm uppercase tracking-widest text-white/70 mb-4">
               Careers at GC Biotech Japan
@@ -136,16 +137,19 @@
         </div>
       </section>
 
+      <!-- FOOTER -->
       <div id="footer"></div>
+
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- LOAD NAV + FOOTER -->
   <script>
+    loadHTML("navbar", "common/navbar.html");
     loadHTML("footer", "common/footer.html");
   </script>
 
-  <!-- GSAP ANIMATION BACK -->
+  <!-- GSAP (ANIMATION BACK) -->
   <script src="assets/gsap-public/minified/gsap.min.js"></script>
   <script src="assets/gsap-public/minified/ScrollTrigger.min.js"></script>
   <script src="assets/gsap-public/minified/ScrollSmoother.min.js"></script>
@@ -155,25 +159,29 @@
 
     ScrollSmoother.create({
       smooth: 0.8,
-      smoothTouch: 0.1
+      smoothTouch: 0.1,
+      effects: true
     });
 
     window.addEventListener("load", () => {
 
-      gsap.utils.toArray(".reveal-section").forEach((section) => {
-        const items = section.querySelectorAll(".reveal-item, .hero-reveal");
+      gsap.set(".hero-reveal", { opacity: 1, y: 0 });
 
-        gsap.set(items, { opacity: 0, y: 30 });
+      gsap.utils.toArray(".reveal-section").forEach((section) => {
+        const items = section.querySelectorAll(".reveal-item");
+
+        gsap.set(items, { opacity: 0, y: 22 });
 
         ScrollTrigger.create({
           trigger: section,
-          start: "top 80%",
+          start: "top 78%",
           onEnter: () => {
             gsap.to(items, {
               opacity: 1,
               y: 0,
-              duration: 0.8,
-              stagger: 0.1
+              duration: 0.75,
+              stagger: 0.1,
+              ease: "power2.out"
             });
           }
         });
