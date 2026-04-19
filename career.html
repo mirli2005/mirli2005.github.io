@@ -8,516 +8,119 @@
   <title>Careers | GC Biotech Japan</title>
 
   <meta name="description"
-    content="Apply to GC Biotech Japan and join biotechnology, molecular biology, diagnostics, and translational research work with real healthcare relevance." />
+    content="Apply to GC Biotech Japan and join biotechnology, molecular biology, diagnostics, and translational research work." />
 
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
     rel="stylesheet" />
-</head>
-
-<body class="flex flex-col min-h-screen bg-white text-slate-900">
 
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
     }
-
-    .dna-scene {
-      position: absolute;
-      top: 2%;
-      left: 2%;
-      width: min(38vw, 390px);
-      height: 100%;
-      pointer-events: none;
-      opacity: 0.34;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      perspective: 1000px;
-    }
-
-    .dna-helix {
-      position: relative;
-      width: 100%;
-      height: 80%;
-      transform-style: preserve-3d;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .dna-row {
-      position: relative;
-      height: 18px;
-      animation: dnaSpin 4.8s linear infinite;
-      transform-style: preserve-3d;
-    }
-
-    .dna-row::before,
-    .dna-row::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 16px;
-      height: 16px;
-      border-radius: 9999px;
-      transform: translateY(-50%);
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(255, 255, 255, 0.12);
-    }
-
-    .dna-row::before {
-      left: 0;
-      background: rgba(255, 255, 255, 0.98);
-    }
-
-    .dna-row::after {
-      right: 0;
-      background: rgba(16, 185, 129, 0.98);
-    }
-
-    .dna-bar {
-      position: absolute;
-      left: 16px;
-      right: 16px;
-      top: 50%;
-      height: 3px;
-      transform: translateY(-50%);
-      background: linear-gradient(90deg,
-          rgba(255, 255, 255, 0.15),
-          rgba(255, 255, 255, 0.95),
-          rgba(16, 185, 129, 0.98),
-          rgba(255, 255, 255, 0.15));
-      border-radius: 9999px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
-    }
-
-    .dna-row:nth-child(1) {
-      animation-delay: -0.0s;
-    }
-
-    .dna-row:nth-child(2) {
-      animation-delay: -0.2s;
-    }
-
-    .dna-row:nth-child(3) {
-      animation-delay: -0.4s;
-    }
-
-    .dna-row:nth-child(4) {
-      animation-delay: -0.6s;
-    }
-
-    .dna-row:nth-child(5) {
-      animation-delay: -0.8s;
-    }
-
-    .dna-row:nth-child(6) {
-      animation-delay: -1.0s;
-    }
-
-    .dna-row:nth-child(7) {
-      animation-delay: -1.2s;
-    }
-
-    .dna-row:nth-child(8) {
-      animation-delay: -1.4s;
-    }
-
-    .dna-row:nth-child(9) {
-      animation-delay: -1.6s;
-    }
-
-    .dna-row:nth-child(10) {
-      animation-delay: -1.8s;
-    }
-
-    .dna-row:nth-child(11) {
-      animation-delay: -2.0s;
-    }
-
-    .dna-row:nth-child(12) {
-      animation-delay: -2.2s;
-    }
-
-    .dna-row:nth-child(13) {
-      animation-delay: -2.4s;
-    }
-
-    .dna-row:nth-child(14) {
-      animation-delay: -2.6s;
-    }
-
-    .dna-row:nth-child(15) {
-      animation-delay: -2.8s;
-    }
-
-    .dna-row:nth-child(16) {
-      animation-delay: -3.0s;
-    }
-
-    .dna-row:nth-child(17) {
-      animation-delay: -3.2s;
-    }
-
-    .dna-row:nth-child(18) {
-      animation-delay: -3.4s;
-    }
-
-    @keyframes dnaSpin {
-      0% {
-        transform: rotateY(0deg) scaleX(1);
-        opacity: 1;
-      }
-
-      25% {
-        transform: rotateY(90deg) scaleX(0.42);
-        opacity: 0.62;
-      }
-
-      50% {
-        transform: rotateY(180deg) scaleX(1);
-        opacity: 1;
-      }
-
-      75% {
-        transform: rotateY(270deg) scaleX(0.42);
-        opacity: 0.62;
-      }
-
-      100% {
-        transform: rotateY(360deg) scaleX(1);
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 1023px) {
-      .dna-scene {
-        width: min(46vw, 260px);
-        left: 0%;
-        opacity: 0.24;
-      }
-
-      .dna-row {
-        height: 15px;
-      }
-
-      .dna-row::before,
-      .dna-row::after {
-        width: 12px;
-        height: 12px;
-      }
-
-      .dna-bar {
-        left: 12px;
-        right: 12px;
-      }
-    }
-
-    @media (max-width: 639px) {
-      .dna-scene {
-        width: 165px;
-        left: -18px;
-        opacity: 0.18;
-      }
-
-      .dna-helix {
-        height: 66%;
-      }
-
-      .dna-row {
-        height: 12px;
-      }
-
-      .dna-row::before,
-      .dna-row::after {
-        width: 10px;
-        height: 10px;
-      }
-
-      .dna-bar {
-        left: 10px;
-        right: 10px;
-        height: 2px;
-      }
-    }
   </style>
+</head>
+
+<body class="bg-white text-slate-900">
 
   <div id="navbar"></div>
-
   <script src="common/include.js"></script>
   <script>
-    loadHTML("navbar", "common/navbar.html").then(() => {
-      const navToggle = document.getElementById('navToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      const backdrop = document.getElementById('backdrop');
-
-      function openMenu() {
-        mobileMenu.classList.remove('scale-y-0', 'opacity-0');
-        mobileMenu.classList.add('scale-y-100', 'opacity-100');
-        backdrop.classList.remove('opacity-0', 'pointer-events-none');
-      }
-
-      function closeMenu() {
-        mobileMenu.classList.add('scale-y-0', 'opacity-0');
-        mobileMenu.classList.remove('scale-y-100', 'opacity-100');
-        backdrop.classList.add('opacity-0', 'pointer-events-none');
-      }
-
-      navToggle?.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.contains('scale-y-100');
-        isOpen ? closeMenu() : openMenu();
-      });
-
-      backdrop?.addEventListener('click', closeMenu);
-    });
+    loadHTML("navbar", "common/navbar.html");
   </script>
 
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
+  <!-- HERO -->
+  <section class="pt-28 pb-16 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white text-center px-4">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+      Join GC Biotech Japan
+    </h1>
+    <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base opacity-90">
+      Work on biotechnology, bioinformatics, and real-world healthcare innovation.
+    </p>
+  </section>
 
-      <!-- HERO -->
-      <section class="relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
-        <div class="dna-scene" aria-hidden="true">
-          <div class="dna-helix">
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-            <div class="dna-row"><span class="dna-bar"></span></div>
-          </div>
-        </div>
+  <!-- INTRO -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold">Why Join Us</h2>
+      <p class="mt-4 text-slate-600">
+        We welcome passionate researchers, bioinformaticians, and innovators who want to work on impactful healthcare problems.
+      </p>
+    </div>
+  </section>
 
-        <div class="absolute inset-0 opacity-10 pointer-events-none">
-          <div class="absolute -top-20 -right-16 h-56 w-56 sm:h-72 sm:w-72 rounded-full bg-white blur-3xl"></div>
-          <div class="absolute bottom-0 right-0 h-56 w-56 sm:h-80 sm:w-80 rounded-full bg-emerald-200 blur-3xl"></div>
-        </div>
+  <!-- APPLICATION FORM -->
+  <section class="py-16 px-4 bg-[#F7FAF9]">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow border p-6 sm:p-8">
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="max-w-4xl ml-auto">
-            <p class="hero-reveal text-[11px] sm:text-sm md:text-base uppercase tracking-[0.18em] sm:tracking-[0.24em] text-white/75 mb-3 sm:mb-4">
-              Careers at GC Biotech Japan
-            </p>
-
-            <h1 class="hero-reveal text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.15] sm:leading-tight">
-              Join work shaped by science, research relevance, and healthcare impact.
-            </h1>
-
-            <p class="hero-reveal mt-4 sm:mt-6 text-sm sm:text-base md:text-xl text-white/85 max-w-3xl leading-relaxed">
-              We welcome applicants who want to contribute to molecular biology, diagnostics,
-              translational research, academic collaboration, and biotechnology-focused innovation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CAREERS INTRO -->
-      <section class="reveal-section bg-white px-4 sm:px-6 py-12 sm:py-14 md:py-20">
-        <div class="max-w-7xl mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
-
-            <div class="reveal-item lg:col-span-7 rounded-2xl sm:rounded-3xl border border-slate-200 bg-[#F7FAF9] p-5 sm:p-7 md:p-8">
-              <p class="text-xs sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.18em] text-teal-700 font-semibold">
-                Why Join Us
-              </p>
-
-              <h2 class="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-                We are open to strong scientific contributors
-              </h2>
-
-              <p class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-                We welcome applications from research staff, molecular biologists, bioinformatics-oriented contributors,
-                and technically strong applicants who want to support meaningful biotechnology and translational-healthcare work.
-              </p>
-            </div>
-
-            <div class="reveal-item lg:col-span-5 rounded-2xl sm:rounded-3xl border border-teal-100 bg-[#EAF6F3] p-5 sm:p-7 md:p-8">
-              <h3 class="text-lg sm:text-xl font-bold text-slate-900">
-                What we value
-              </h3>
-
-              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Scientific seriousness, collaborative mindset, technical curiosity, and a genuine interest in
-                research that connects biotechnology with real healthcare value.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-     <!-- APPLICATION FORM -->
-<section class="reveal-section bg-[#F7FAF9] px-4 sm:px-6 py-12 sm:py-14 md:py-24">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm bg-white">
-
-      <!-- FULL WIDTH FORM -->
-      <div class="lg:col-span-12 p-5 sm:p-8 md:p-10 lg:p-12 border-slate-200">
-        <div class="reveal-item max-w-2xl mx-auto text-center">
-          <p class="text-xs sm:text-sm uppercase tracking-[0.16em] sm:tracking-[0.18em] text-teal-700 font-semibold">
-            Application Form
-          </p>
-
-          <h2 class="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-            Apply to work with GC Biotech Japan
-          </h2>
-
-          <p class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Tell us about your background, area of expertise, and the kind of role or collaboration you are seeking.
-          </p>
-        </div>
-
-        <form
-          action="https://formsubmit.co/santoshgothwalbio@gmail.com"
-          method="POST"
-          class="mt-10 space-y-6 max-w-3xl mx-auto reveal-item"
-        >
-          <input type="hidden" name="_subject" value="New GC Biotech Japan Career Application">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
-              <input name="first_name" type="text" required class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
-              <input name="last_name" type="text" required class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
-              <input name="email" type="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Phone</label>
-              <input name="phone" type="text" class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Position</label>
-              <select name="position_interest" required class="w-full rounded-xl border border-slate-300 px-4 py-3">
-                <option disabled selected>Select</option>
-                <option>Bioinformatics</option>
-                <option>Molecular Biology</option>
-                <option>Diagnostics</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Experience</label>
-              <select name="experience_level" required class="w-full rounded-xl border border-slate-300 px-4 py-3">
-                <option disabled selected>Select</option>
-                <option>Student</option>
-                <option>Early Career</option>
-                <option>Experienced</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Background</label>
-            <input name="background" type="text" class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">LinkedIn</label>
-            <input name="linkedin_profile" type="url" class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">CV Link</label>
-            <input name="cv_link" type="url" class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
-            <textarea name="application_message" rows="6" required class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
-          </div>
-
-          <button type="submit" class="w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-teal-700">
-            Submit Application
-          </button>
-        </form>
+      <div class="text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold">Apply Now</h2>
+        <p class="mt-2 text-slate-600 text-sm">
+          Fill the form below to apply
+        </p>
       </div>
 
-    </div>
-  </div>
-</section> 
+      <form action="https://formsubmit.co/santoshgothwalbio@gmail.com" method="POST"
+        class="mt-8 space-y-5">
 
-      <div id="footer"></div>
-    </div>
-  </div>
+        <input type="hidden" name="_captcha" value="false">
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input name="first_name" required placeholder="First Name"
+            class="border p-3 rounded w-full" />
+          <input name="last_name" required placeholder="Last Name"
+            class="border p-3 rounded w-full" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input name="email" type="email" required placeholder="Email"
+            class="border p-3 rounded w-full" />
+          <input name="phone" placeholder="Phone"
+            class="border p-3 rounded w-full" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <select name="position_interest" required class="border p-3 rounded w-full">
+            <option disabled selected>Position</option>
+            <option>Bioinformatics</option>
+            <option>Molecular Biology</option>
+            <option>Diagnostics</option>
+          </select>
+
+          <select name="experience_level" required class="border p-3 rounded w-full">
+            <option disabled selected>Experience</option>
+            <option>Student</option>
+            <option>Early Career</option>
+            <option>Experienced</option>
+          </select>
+        </div>
+
+        <input name="background" placeholder="Background"
+          class="border p-3 rounded w-full" />
+
+        <input name="linkedin_profile" placeholder="LinkedIn"
+          class="border p-3 rounded w-full" />
+
+        <input name="cv_link" placeholder="CV Link"
+          class="border p-3 rounded w-full" />
+
+        <textarea name="application_message" required rows="5"
+          placeholder="Why are you applying?"
+          class="border p-3 rounded w-full"></textarea>
+
+        <button type="submit"
+          class="w-full bg-slate-900 text-white py-3 rounded font-semibold hover:bg-teal-700">
+          Submit Application
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <div id="footer"></div>
   <script>
     loadHTML("footer", "common/footer.html");
-  </script>
-
-  <script src="assets/gsap-public/minified/gsap.min.js"></script>
-  <script src="assets/gsap-public/minified/ScrollTrigger.min.js"></script>
-  <script src="assets/gsap-public/minified/ScrollSmoother.min.js"></script>
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-    ScrollSmoother.create({
-      smooth: 0.8,
-      smoothTouch: 0.1,
-      effects: true
-    });
-
-    window.addEventListener("load", () => {
-      gsap.set(".hero-reveal", { opacity: 1, y: 0 });
-
-      gsap.utils.toArray(".reveal-section").forEach((section) => {
-        const items = section.querySelectorAll(".reveal-item");
-
-        gsap.set(items, { opacity: 0, y: 22 });
-
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top 78%",
-          onEnter: () => {
-            gsap.to(items, {
-              opacity: 1,
-              y: 0,
-              duration: 0.75,
-              stagger: 0.1,
-              ease: "power2.out",
-              overwrite: "auto"
-            });
-          },
-          onLeaveBack: () => {
-            gsap.set(items, { opacity: 0, y: 22 });
-          }
-        });
-      });
-
-      ScrollTrigger.refresh();
-    });
   </script>
 
 </body>
