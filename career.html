@@ -7,6 +7,9 @@
 
   <title>Careers | GC Biotech Japan</title>
 
+  <meta name="description"
+    content="Apply to GC Biotech Japan and join biotechnology, molecular biology, diagnostics, and translational research work with real healthcare relevance." />
+
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,30 +17,31 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
 </head>
 
 <body class="flex flex-col min-h-screen bg-white text-slate-900">
 
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
-  <script src="common/include.js"></script>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
 
-  <!-- SMOOTH WRAPPER -->
+  <div id="navbar"></div>
+
+  <script src="common/include.js"></script>
+  <script>
+    loadHTML("navbar", "common/navbar.html");
+  </script>
+
   <div id="smooth-wrapper">
     <div id="smooth-content">
 
       <!-- HERO -->
-      <section class="relative overflow-hidden pt-40 sm:pt-44 md:pt-48 pb-24 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
-        <div class="max-w-7xl mx-auto px-6">
+      <section class="relative overflow-hidden pt-36 pb-14 sm:pt-40 sm:pb-18 md:pt-44 md:pb-20 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white">
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div class="max-w-4xl ml-auto">
 
-            <p class="hero-reveal text-sm uppercase tracking-widest text-white/70 mb-4">
+            <p class="hero-reveal text-sm uppercase tracking-widest text-white/75 mb-3">
               Careers at GC Biotech Japan
             </p>
 
@@ -45,87 +49,76 @@
               Join work shaped by science, research relevance, and healthcare impact.
             </h1>
 
-            <p class="hero-reveal mt-6 text-base md:text-xl text-white/80 max-w-3xl">
+            <p class="hero-reveal mt-4 text-sm sm:text-base md:text-xl text-white/85 max-w-3xl">
               We welcome applicants who want to contribute to molecular biology,
-              diagnostics, translational research, and bioinformatics-driven innovation.
+              diagnostics and biotechnology innovation.
             </p>
-
           </div>
         </div>
       </section>
 
       <!-- APPLICATION FORM -->
-      <section class="reveal-section bg-[#F7FAF9] px-4 sm:px-6 py-14 md:py-24">
-        <div class="max-w-6xl mx-auto">
+      <section class="reveal-section bg-[#F7FAF9] px-4 sm:px-6 py-12 sm:py-14 md:py-24">
+        <div class="max-w-5xl mx-auto">
+          <div class="rounded-[2rem] border border-slate-200 shadow-sm bg-white p-6 sm:p-10 md:p-12">
 
-          <div class="reveal-item bg-white rounded-[2rem] border border-slate-200 shadow-sm p-6 sm:p-10 md:p-12">
-
-            <div class="text-center max-w-2xl mx-auto">
+            <div class="reveal-item text-center max-w-xl mx-auto">
               <p class="text-xs uppercase tracking-widest text-teal-700 font-semibold">
                 Application Form
               </p>
 
-              <h2 class="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
+              <h2 class="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold whitespace-nowrap">
                 Apply to work with GC Biotech Japan
               </h2>
 
-              <p class="mt-3 text-sm sm:text-base text-slate-600">
+              <p class="mt-3 text-sm text-slate-600">
                 Tell us about your background and experience.
               </p>
             </div>
 
             <form action="https://formsubmit.co/santoshgothwalbio@gmail.com"
               method="POST"
-              class="mt-10 max-w-3xl mx-auto space-y-6">
+              class="mt-8 max-w-2xl mx-auto space-y-5 reveal-item">
 
               <input type="hidden" name="_captcha" value="false">
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <input name="first_name" required placeholder="First Name"
-                  class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-
-                <input name="last_name" required placeholder="Last Name"
-                  class="w-full rounded-xl border border-slate-300 px-4 py-3" />
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input name="first_name" required placeholder="First name"
+                  class="w-full rounded-xl border px-4 py-3" />
+                <input name="last_name" required placeholder="Last name"
+                  class="w-full rounded-xl border px-4 py-3" />
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input name="email" type="email" required placeholder="Email"
-                  class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-
+                  class="w-full rounded-xl border px-4 py-3" />
                 <input name="phone" placeholder="Phone"
-                  class="w-full rounded-xl border border-slate-300 px-4 py-3" />
+                  class="w-full rounded-xl border px-4 py-3" />
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <select name="position_interest" required
-                  class="w-full rounded-xl border border-slate-300 px-4 py-3">
-                  <option disabled selected>Select Position</option>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <select name="position_interest" required class="w-full rounded-xl border px-4 py-3">
+                  <option disabled selected>Select</option>
                   <option>Bioinformatics</option>
                   <option>Molecular Biology</option>
                   <option>Diagnostics</option>
                 </select>
 
-                <select name="experience_level" required
-                  class="w-full rounded-xl border border-slate-300 px-4 py-3">
-                  <option disabled selected>Experience Level</option>
+                <select name="experience_level" required class="w-full rounded-xl border px-4 py-3">
+                  <option disabled selected>Experience</option>
                   <option>Student</option>
-                  <option>Early Career</option>
-                  <option>Experienced</option>
+                  <option>Early</option>
+                  <option>Mid</option>
+                  <option>Senior</option>
                 </select>
               </div>
 
-              <input name="background" placeholder="Background"
-                class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-
-              <input name="linkedin_profile" placeholder="LinkedIn Profile"
-                class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-
-              <input name="cv_link" placeholder="CV / Portfolio Link"
-                class="w-full rounded-xl border border-slate-300 px-4 py-3" />
+              <input name="cv_link" placeholder="CV / Portfolio link"
+                class="w-full rounded-xl border px-4 py-3" />
 
               <textarea name="application_message" rows="6" required
-                placeholder="Tell us about yourself..."
-                class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
+                placeholder="Tell us about your experience..."
+                class="w-full rounded-xl border px-4 py-3"></textarea>
 
               <button type="submit"
                 class="w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-teal-700">
@@ -137,19 +130,15 @@
         </div>
       </section>
 
-      <!-- FOOTER -->
       <div id="footer"></div>
-
     </div>
   </div>
 
-  <!-- LOAD NAV + FOOTER -->
   <script>
-    loadHTML("navbar", "common/navbar.html");
     loadHTML("footer", "common/footer.html");
   </script>
 
-  <!-- GSAP (ANIMATION BACK) -->
+  <!-- GSAP -->
   <script src="assets/gsap-public/minified/gsap.min.js"></script>
   <script src="assets/gsap-public/minified/ScrollTrigger.min.js"></script>
   <script src="assets/gsap-public/minified/ScrollSmoother.min.js"></script>
@@ -159,29 +148,25 @@
 
     ScrollSmoother.create({
       smooth: 0.8,
-      smoothTouch: 0.1,
-      effects: true
+      smoothTouch: 0.1
     });
 
     window.addEventListener("load", () => {
 
-      gsap.set(".hero-reveal", { opacity: 1, y: 0 });
-
       gsap.utils.toArray(".reveal-section").forEach((section) => {
-        const items = section.querySelectorAll(".reveal-item");
+        const items = section.querySelectorAll(".reveal-item, .hero-reveal");
 
-        gsap.set(items, { opacity: 0, y: 22 });
+        gsap.set(items, { opacity: 0, y: 25 });
 
         ScrollTrigger.create({
           trigger: section,
-          start: "top 78%",
+          start: "top 80%",
           onEnter: () => {
             gsap.to(items, {
               opacity: 1,
               y: 0,
-              duration: 0.75,
-              stagger: 0.1,
-              ease: "power2.out"
+              duration: 0.7,
+              stagger: 0.1
             });
           }
         });
