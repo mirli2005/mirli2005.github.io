@@ -1,127 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<section class="reveal-section bg-[#F7FAF9] px-4 sm:px-6 py-12 sm:py-14 md:py-24">
+  <div class="max-w-5xl mx-auto bg-white rounded-[2rem] border border-slate-200 shadow-sm p-6 sm:p-8 md:p-10">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <div class="reveal-item text-center max-w-2xl mx-auto">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.16em] text-teal-700 font-semibold">
+        Application Form
+      </p>
 
-  <title>Careers | GC Biotech Japan</title>
+      <h2 class="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
+        Apply to work with GC Biotech Japan
+      </h2>
 
-  <meta name="description"
-    content="Apply to GC Biotech Japan and join biotechnology, molecular biology, diagnostics, and translational research work." />
-
-  <link rel="stylesheet" href="assets/css/tailwind.css" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
-</head>
-
-<body class="bg-white text-slate-900">
-
-  <div id="navbar"></div>
-  <script src="common/include.js"></script>
-  <script>
-    loadHTML("navbar", "common/navbar.html");
-  </script>
-
-  <!-- HERO -->
-  <section class="pt-28 pb-16 bg-gradient-to-br from-slate-900 via-teal-800 to-cyan-700 text-white text-center px-4">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
-      Join GC Biotech Japan
-    </h1>
-    <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base opacity-90">
-      Work on biotechnology, bioinformatics, and real-world healthcare innovation.
-    </p>
-  </section>
-
-  <!-- INTRO -->
-  <section class="py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold">Why Join Us</h2>
-      <p class="mt-4 text-slate-600">
-        We welcome passionate researchers, bioinformaticians, and innovators who want to work on impactful healthcare problems.
+      <p class="mt-3 text-sm sm:text-base text-slate-600">
+        Tell us about your background, area of expertise, and the role you are seeking.
       </p>
     </div>
-  </section>
 
-  <!-- APPLICATION FORM -->
-  <section class="py-16 px-4 bg-[#F7FAF9]">
-    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow border p-6 sm:p-8">
+    <form
+      action="https://formsubmit.co/santoshgothwalbio@gmail.com"
+      method="POST"
+      class="mt-10 space-y-6 max-w-3xl mx-auto reveal-item"
+    >
+      <input type="hidden" name="_subject" value="New Application">
+      <input type="hidden" name="_captcha" value="false">
 
-      <div class="text-center">
-        <h2 class="text-2xl sm:text-3xl font-bold">Apply Now</h2>
-        <p class="mt-2 text-slate-600 text-sm">
-          Fill the form below to apply
-        </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <input name="first_name" required placeholder="First Name"
+          class="w-full rounded-xl border border-slate-300 px-4 py-3" />
+        <input name="last_name" required placeholder="Last Name"
+          class="w-full rounded-xl border border-slate-300 px-4 py-3" />
       </div>
 
-      <form action="https://formsubmit.co/santoshgothwalbio@gmail.com" method="POST"
-        class="mt-8 space-y-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <input name="email" type="email" required placeholder="Email"
+          class="w-full rounded-xl border border-slate-300 px-4 py-3" />
+        <input name="phone" placeholder="Phone"
+          class="w-full rounded-xl border border-slate-300 px-4 py-3" />
+      </div>
 
-        <input type="hidden" name="_captcha" value="false">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <select name="position_interest" required class="w-full rounded-xl border border-slate-300 px-4 py-3">
+          <option disabled selected>Select Position</option>
+          <option>Bioinformatics</option>
+          <option>Molecular Biology</option>
+          <option>Diagnostics</option>
+        </select>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input name="first_name" required placeholder="First Name"
-            class="border p-3 rounded w-full" />
-          <input name="last_name" required placeholder="Last Name"
-            class="border p-3 rounded w-full" />
-        </div>
+        <select name="experience_level" required class="w-full rounded-xl border border-slate-300 px-4 py-3">
+          <option disabled selected>Experience Level</option>
+          <option>Student</option>
+          <option>Early Career</option>
+          <option>Experienced</option>
+        </select>
+      </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input name="email" type="email" required placeholder="Email"
-            class="border p-3 rounded w-full" />
-          <input name="phone" placeholder="Phone"
-            class="border p-3 rounded w-full" />
-        </div>
+      <input name="background" placeholder="Background"
+        class="w-full rounded-xl border border-slate-300 px-4 py-3" />
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <select name="position_interest" required class="border p-3 rounded w-full">
-            <option disabled selected>Position</option>
-            <option>Bioinformatics</option>
-            <option>Molecular Biology</option>
-            <option>Diagnostics</option>
-          </select>
+      <input name="linkedin_profile" placeholder="LinkedIn Profile"
+        class="w-full rounded-xl border border-slate-300 px-4 py-3" />
 
-          <select name="experience_level" required class="border p-3 rounded w-full">
-            <option disabled selected>Experience</option>
-            <option>Student</option>
-            <option>Early Career</option>
-            <option>Experienced</option>
-          </select>
-        </div>
+      <input name="cv_link" placeholder="CV / Portfolio Link"
+        class="w-full rounded-xl border border-slate-300 px-4 py-3" />
 
-        <input name="background" placeholder="Background"
-          class="border p-3 rounded w-full" />
+      <textarea name="application_message" rows="6" required
+        placeholder="Tell us about yourself..."
+        class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
 
-        <input name="linkedin_profile" placeholder="LinkedIn"
-          class="border p-3 rounded w-full" />
+      <button type="submit"
+        class="w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-teal-700">
+        Submit Application
+      </button>
+    </form>
 
-        <input name="cv_link" placeholder="CV Link"
-          class="border p-3 rounded w-full" />
-
-        <textarea name="application_message" required rows="5"
-          placeholder="Why are you applying?"
-          class="border p-3 rounded w-full"></textarea>
-
-        <button type="submit"
-          class="w-full bg-slate-900 text-white py-3 rounded font-semibold hover:bg-teal-700">
-          Submit Application
-        </button>
-
-      </form>
-    </div>
-  </section>
-
-  <div id="footer"></div>
-  <script>
-    loadHTML("footer", "common/footer.html");
-  </script>
-
-</body>
-</html>
+  </div>
+</section>
